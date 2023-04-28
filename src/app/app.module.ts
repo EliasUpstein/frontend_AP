@@ -11,6 +11,9 @@ import { HeaderComponent } from './components/inicio/header/header.component';
 import { BannerComponent } from './components/inicio/header/banner/banner.component';
 import { RedesComponent } from './components/inicio/header/redes/redes.component';
 import { AboutComponent } from './components/inicio/about/about.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage, getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { AboutComponent } from './components/inicio/about/about.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [],
   bootstrap: [AppComponent]

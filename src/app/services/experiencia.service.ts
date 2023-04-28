@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/main';
+import { environment } from 'src/environments/environment';
 import { Experiencia } from '../models/experiencia';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SExperienciaService {
+export class ExperienciaService {
 
   URL = environment.URL + 'explab/';
 

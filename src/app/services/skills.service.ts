@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { identifierName } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/main';
+import { environment } from 'src/environments/environment';
 import { Skill } from '../models/skills';
 
 @Injectable({
