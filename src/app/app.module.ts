@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/inicio/header/header.component';
 import { BannerComponent } from './components/inicio/header/banner/banner.component';
 import { RedesComponent } from './components/inicio/header/redes/redes.component';
+import { AboutComponent } from './components/inicio/about/about.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RedesComponent } from './components/inicio/header/redes/redes.component
     LoginComponent,
     HeaderComponent,
     BannerComponent,
-    RedesComponent
+    RedesComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
