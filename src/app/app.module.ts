@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 import { InicioComponent } from './components/inicio/inicio.component';
 import { LoginComponent } from './components/login/login.component';
@@ -21,6 +22,9 @@ import { ExperienciaNewComponent } from './components/inicio/experiencia/experie
 import { EducacionComponent } from './components/inicio/educacion/educacion.component';
 import { EducacionEditComponent } from './components/inicio/educacion/educacion-edit/educacion-edit.component';
 import { EducacionNewComponent } from './components/inicio/educacion/educacion-new/educacion-new.component';
+import { SkillsComponent } from './components/inicio/skills/skills.component';
+import { SkillsEditComponent } from './components/inicio/skills/skills-edit/skills-edit.component';
+import { SkillsNewComponent } from './components/inicio/skills/skills-new/skills-new.component';
 
 @NgModule({
   declarations: [
@@ -37,13 +41,17 @@ import { EducacionNewComponent } from './components/inicio/educacion/educacion-n
     ExperienciaNewComponent,
     EducacionComponent,
     EducacionEditComponent,
-    EducacionNewComponent
+    EducacionNewComponent,
+    SkillsComponent,
+    SkillsEditComponent,
+    SkillsNewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    NgCircleProgressModule.forRoot(),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage())
   ],
