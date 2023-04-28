@@ -14,7 +14,7 @@ export class AboutComponent implements OnInit {
 
   // constructor(public personaService: PersonaService,
   //   private tokenService: TokenService) { }
-  isLogged = true;
+  isLogged = false;
 
   ngOnInit(): void {
   //   this.cargarPersona();
