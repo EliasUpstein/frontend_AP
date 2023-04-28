@@ -14,6 +14,7 @@ import { AboutComponent } from './components/inicio/about/about.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage, getStorage } from '@angular/fire/storage';
+import { AboutEditComponent } from './components/inicio/about/about-edit/about-edit.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { provideStorage, getStorage } from '@angular/fire/storage';
     HeaderComponent,
     BannerComponent,
     RedesComponent,
-    AboutComponent
+    AboutComponent,
+    AboutEditComponent
   ],
   imports: [
     BrowserModule,
