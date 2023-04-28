@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { HttpClientModule } from '@angular/common/http';
 
 import { InicioComponent } from './components/inicio/inicio.component';
 import { LoginComponent } from './components/login/login.component';
@@ -29,6 +30,7 @@ import { ProyectosComponent } from './components/inicio/proyectos/proyectos.comp
 import { ProyectosEditComponent } from './components/inicio/proyectos/proyectos-edit/proyectos-edit.component';
 import { ProyectosNewComponent } from './components/inicio/proyectos/proyectos-new/proyectos-new.component';
 import { FooterComponent } from './components/inicio/footer/footer.component';
+import { interceptorProvider } from './services/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -60,10 +62,13 @@ import { FooterComponent } from './components/inicio/footer/footer.component';
     BrowserAnimationsModule,
     FormsModule,
     NgCircleProgressModule.forRoot(),
+    HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage())
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
