@@ -15,6 +15,9 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 import { AboutEditComponent } from './components/inicio/about/about-edit/about-edit.component';
+import { ExperienciaComponent } from './components/inicio/experiencia/experiencia.component';
+import { ExperienciaEditComponent } from './components/inicio/experiencia/experiencia-edit/experiencia-edit.component';
+import { ExperienciaNewComponent } from './components/inicio/experiencia/experiencia-new/experiencia-new.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { AboutEditComponent } from './components/inicio/about/about-edit/about-e
     BannerComponent,
     RedesComponent,
     AboutComponent,
-    AboutEditComponent
+    AboutEditComponent,
+    ExperienciaComponent,
+    ExperienciaEditComponent,
+    ExperienciaNewComponent
   ],
   imports: [
     BrowserModule,
