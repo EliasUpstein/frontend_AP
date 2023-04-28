@@ -28,6 +28,7 @@ import { SkillsNewComponent } from './components/inicio/skills/skills-new/skills
 import { ProyectosComponent } from './components/inicio/proyectos/proyectos.component';
 import { ProyectosEditComponent } from './components/inicio/proyectos/proyectos-edit/proyectos-edit.component';
 import { ProyectosNewComponent } from './components/inicio/proyectos/proyectos-new/proyectos-new.component';
+import { FooterComponent } from './components/inicio/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { ProyectosNewComponent } from './components/inicio/proyectos/proyectos-n
     SkillsNewComponent,
     ProyectosComponent,
     ProyectosEditComponent,
-    ProyectosNewComponent
+    ProyectosNewComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
