@@ -9,6 +9,8 @@ import { EducacionNewComponent } from './components/inicio/educacion/educacion-n
 import { EducacionEditComponent } from './components/inicio/educacion/educacion-edit/educacion-edit.component';
 import { SkillsNewComponent } from './components/inicio/skills/skills-new/skills-new.component';
 import { SkillsEditComponent } from './components/inicio/skills/skills-edit/skills-edit.component';
+import { ProyectosNewComponent } from './components/inicio/proyectos/proyectos-new/proyectos-new.component';
+import { ProyectosEditComponent } from './components/inicio/proyectos/proyectos-edit/proyectos-edit.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -20,9 +22,8 @@ const routes: Routes = [
   { path: 'educacion-edit/:id', component: EducacionEditComponent},
   { path: 'skills-new', component: SkillsNewComponent},
   { path: 'skills-edit/:id', component: SkillsEditComponent},
-  // { path: 'newproject', component: NewprojectComponent},
-  // { path: 'editproject/:id', component: EditprojectComponent}
-
+  { path: 'proyectos-new', component: ProyectosNewComponent},
+  { path: 'proyectos-edit/:id', component: ProyectosEditComponent}
 ];
 
 @NgModule({
