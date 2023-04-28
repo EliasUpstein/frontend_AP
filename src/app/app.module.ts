@@ -10,6 +10,9 @@ import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/inicio/header/header.component';
 import { BannerComponent } from './components/inicio/header/banner/banner.component';
 import { RedesComponent } from './components/inicio/header/redes/redes.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { RedesComponent } from './components/inicio/header/redes/redes.component
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [],
   bootstrap: [AppComponent]
