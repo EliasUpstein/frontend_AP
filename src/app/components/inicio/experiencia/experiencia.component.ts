@@ -10,32 +10,32 @@ import { TokenService } from 'src/app/services/token.service';
 export class ExperienciaComponent implements OnInit {
   expe: Experiencia[] = [];
 
-  // constructor(private Experiencia: ExperienciaService, private tokenService: TokenService) { }
+  constructor(private Experiencia: ExperienciaService, private tokenService: TokenService) { }
 
-  isLogged = true;
+  isLogged = false;
 
   ngOnInit(): void {
-    // this.cargarExperiencia();
-    // if (this.tokenService.getToken()) {
-    //   this.isLogged = true;
-    // } else {
-    //   this.isLogged = false;
-    // }
+    this.cargarExperiencia();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
-  // cargarExperiencia(): void {
-  //   this.Experiencia.lista().subscribe(data => { this.expe = data; })
-  // }
+  cargarExperiencia(): void {
+    this.Experiencia.lista().subscribe(data => { this.expe = data; })
+  }
 
   delete(id?: number) {
-    // if (id != undefined) {
-    //   this.Experiencia.delete(id).subscribe(
-    //     data => {
-    //       this.cargarExperiencia();
-    //     }, err => {
-    //       alert("No se pudo borrar la experiencia");
-    //     }
-    //   )
-    // }
+    if (id != undefined) {
+      this.Experiencia.delete(id).subscribe(
+        data => {
+          this.cargarExperiencia();
+        }, err => {
+          alert("No se pudo borrar la experiencia");
+        }
+      )
+    }
   }
 }
