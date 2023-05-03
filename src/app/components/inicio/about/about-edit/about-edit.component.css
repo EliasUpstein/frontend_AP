@@ -1,0 +1,18 @@
+@import url(../../../../../assets/css/edit_templates.css);
+
+.prev-text {
+    color: #FFF;
+}
+
+.prev-img {
+    width: 200px;
+    margin-left: 35%;
+}
+
+/*--- Para la vista de celular ---*/
+@media (max-width: 575px) {
+    .prev-img {
+        width: 150px;
+        margin-left: 35%;
+    }
+}

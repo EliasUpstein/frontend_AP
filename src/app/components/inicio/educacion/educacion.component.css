@@ -1,0 +1,12 @@
+.row {
+    padding: 20px;
+}
+
+section, article, div {
+    background: #96afe6;
+}
+
+h1,
+h3 {
+    display: inline;
+}
