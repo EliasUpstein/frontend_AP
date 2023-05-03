@@ -11,6 +11,7 @@ export class ProyectosNewComponent implements OnInit {
 
   nombreP: string;
   descripcionP: string;
+  linkP: string;
 
   constructor(private sProyectos: ProyectosService, private router: Router) { }
 
@@ -19,7 +20,7 @@ export class ProyectosNewComponent implements OnInit {
 
 
   onCreate(): void {
-    const expe = new Proyectos(this.nombreP, this.descripcionP);
+    const expe = new Proyectos(this.nombreP, this.descripcionP, this.linkP);
     this.sProyectos.save(expe).subscribe(
       data => {
         alert("Proyecto añadido");
