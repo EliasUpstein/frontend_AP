@@ -1,13 +1,13 @@
-<div class="row">
+<section class="row">
     <h1>Educacion</h1>
-    <div class="col-lg-2">
+    <article class="col-lg-2">
         <button type="button" class="btn btn-dark" routerLink="/educacion-new" *ngIf="isLogged">
             Agregar Educacion
         </button>
-    </div>
+    </article>
 
     <div class="col lg 1"></div>
-    <div class="col-lg-11">
+    <article class="col-lg-11">
         <table class="table">
             <tbody>
                 <tr *ngFor="let Educacion of educacion">
@@ -26,6 +26,5 @@
                 </tr>
             </tbody>
         </table>
-    </div>
-
-</div>
+    </article>
+</section>

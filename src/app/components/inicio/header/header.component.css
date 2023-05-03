@@ -4,5 +4,6 @@ div {
 
 app-redes {
     float: right;
-    margin-top: 0.5em;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
 }

@@ -1,20 +1,22 @@
-<div class="row">
+<section class="row">
     <h1>Experiencia laboral</h1>
-    <div class="col-lg-2">
+    <article class="col-lg-2">
         <button type="button" class="btn btn-dark" routerLink="/experiencia-new" *ngIf="isLogged">
             Nueva Experiencia
         </button>
-    </div>
+    </article>
 
-    <div class="col lg 1"></div>
-    <div class="col-lg-11">
+    <div class="col-lg-1"></div>
+    <article class="col-lg-11">
         <table class="table">
             <tbody>
                 <tr *ngFor="let Experiencia of expe">
                     <td>
                         <h2>{{Experiencia.nombreE}}</h2>
                     </td>
-                    <td>{{Experiencia.descripcionE}}</td>
+                    <td>
+                        {{Experiencia.descripcionE}}
+                    </td>
                     <td *ngIf="isLogged">
                         <button class="btn btn-light" routerLink="/experiencia-edit/{{Experiencia.id}}">
                             <i class="bi bi-pencil-fill"></i> EDITAR</button>
@@ -26,6 +28,5 @@
                 </tr>
             </tbody>
         </table>
-    </div>
-
-</div>
+    </article>
+</section>
