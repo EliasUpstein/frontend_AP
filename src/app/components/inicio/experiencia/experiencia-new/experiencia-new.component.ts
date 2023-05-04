@@ -10,6 +10,7 @@ import { ExperienciaService } from 'src/app/services/experiencia.service';
 })
 export class ExperienciaNewComponent implements OnInit {
   nombreE: string = '';
+  empresaE: string = '';
   descripcionE: string = '';
 
   constructor(private Experiencia: ExperienciaService, private router: Router) { }
@@ -18,7 +19,7 @@ export class ExperienciaNewComponent implements OnInit {
   }
 
   onCreate(): void {
-    const expe = new Experiencia(this.nombreE, this.descripcionE);
+    const expe = new Experiencia(this.nombreE, this.empresaE, this.descripcionE);
     this.Experiencia.save(expe).subscribe(
       data => {
         alert("Experiencia añadida");
