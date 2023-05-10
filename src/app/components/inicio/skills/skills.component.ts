@@ -32,13 +32,10 @@ export class SkillsComponent implements OnInit {
 
   delete(id: number) {
     if (id != undefined) {
-      this.skillS.delete(id).subscribe(
-        data => {
-          this.cargarSkills();
-        }, err => {
-          alert("No se pudo borrar la skill");
-        }
-      )
+      this.skillS.delete(id).subscribe({
+        next: () => this.cargarSkills(),
+        error: () => alert("No se pudo borrar la skill")
+      });
     }
   }
 }

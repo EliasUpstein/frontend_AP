@@ -18,25 +18,20 @@ export class SkillsEditComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.skillS.detail(id).subscribe(
-      data => {
-        this.skill = data;
-      }, err => {
+    this.skillS.detail(id).subscribe({
+      next: (data) => this.skill = data,
+      error: (err) => {
         alert("Error al modificar");
         this.router.navigate(['']);
       }
-    )
+    });
   }
 
   onUpdate() {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.skillS.update(id, this.skill).subscribe(
-      data => {
-        this.router.navigate(['']);
-      }, err => {
-        alert("Error al modificar la skill");
-        this.router.navigate(['']);
-      }
-    )
+    this.skillS.update(id, this.skill).subscribe({
+      error: () => alert("Error al modificar la skill")
+    });
+    this.router.navigate(['']);
   }
 }

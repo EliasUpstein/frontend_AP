@@ -21,14 +21,10 @@ export class ProyectosNewComponent implements OnInit {
 
   onCreate(): void {
     const expe = new Proyectos(this.nombreP, this.descripcionP, this.linkP);
-    this.sProyectos.save(expe).subscribe(
-      data => {
-        alert("Proyecto añadido");
-        this.router.navigate(['']);
-      }, err => {
-        alert("Falló");
-        this.router.navigate(['']);
-      }
-    )
+    this.sProyectos.save(expe).subscribe({
+      next: () => alert("Proyecto añadido"),
+      error: () => alert("Fallo al añadir el proyecto")
+    });
+    this.router.navigate(['']);
   }
 }
