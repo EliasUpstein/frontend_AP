@@ -11,5 +11,5 @@ export const environment = {
   },
 
   production: true,
-  URL: 'https://eubackend-ap.onrender.com'
+  URL: 'https://eubackend-ap.onrender.com/'
 };
