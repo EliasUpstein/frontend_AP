@@ -22,6 +22,11 @@ h1 {
         left: 3%;
         top: 550px;
     }
+
+    #nombre {
+        font-weight: bold;
+        margin-top: 10%;
+    }
 }
 
 @media (max-width: 575px) {
@@ -33,10 +38,9 @@ h1 {
         left: 33%;
         top: 400px;
     }
-}
 
-/*etiqueta nombre*/
-#nombre {
-    font-weight: bold;
-    margin-top: 10%;
+    #nombre {
+        font-weight: bold;
+        margin-top: 25%;
+    }
 }
