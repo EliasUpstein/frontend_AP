@@ -9,13 +9,26 @@
     <div class="col lg 1"></div>
     <article class="col-lg-11">
         <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <h4>Nombre</h4>
+                    </th>
+                    <th>
+                        <h4>Institución</h4>
+                    </th>
+                    <th>
+                        <h4>Descripción</h4>
+                    </th>
+                </tr>
+            </thead>
             <tbody>
                 <tr *ngFor="let Educacion of educacion">
                     <td>
-                        <h2>{{Educacion.nombreE}}</h2>
+                        <h3>{{Educacion.nombreE}}</h3>
                     </td>
                     <td>
-                        <h2>{{Educacion.institucionE}}</h2>
+                        {{Educacion.institucionE}}
                     </td>
                     <td>
                         {{Educacion.descripcionE}}

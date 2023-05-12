@@ -9,13 +9,26 @@
     <div class="col-lg-1"></div>
     <article class="col-lg-11">
         <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <h4>Nombre</h4>
+                    </th>
+                    <th>
+                        <h4>Descripción</h4>
+                    </th>
+                    <th>
+                        <h4>URL</h4>
+                    </th>
+                </tr>
+            </thead>
             <tbody>
                 <tr *ngFor="let Proyectos of proyectos">
                     <td>
-                        <h4>{{Proyectos.nombreP}}</h4>
+                        <h3>{{Proyectos.nombreP}}</h3>
                     </td>
                     <td>
-                        <h6>{{Proyectos.descripcionP}}</h6>
+                        {{Proyectos.descripcionP}}
                     </td>
                     <td>
                         <h6><a href="{{Proyectos.linkP}}" target="_blank">Ver proyecto</a></h6>

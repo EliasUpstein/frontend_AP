@@ -9,10 +9,23 @@
     <div class="col-lg-1"></div>
     <article class="col-lg-11">
         <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <h4>Nombre</h4>
+                    </th>
+                    <th>
+                        <h4>Empresa</h4>
+                    </th>
+                    <th>
+                        <h4>Descripción</h4>
+                    </th>
+                </tr>
+            </thead>
             <tbody>
                 <tr *ngFor="let Experiencia of expe">
                     <td>
-                        <h2>{{Experiencia.nombreE}}</h2>
+                        <h3>{{Experiencia.nombreE}}</h3>
                     </td>
                     <td>
                         {{Experiencia.empresaE}}
