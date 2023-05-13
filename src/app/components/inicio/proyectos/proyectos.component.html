@@ -12,13 +12,13 @@
             <thead>
                 <tr>
                     <th>
-                        <h4>Nombre</h4>
+                        <h4><i>Nombre</i></h4>
                     </th>
                     <th>
-                        <h4>Descripción</h4>
+                        <h4><i>Descripción</i></h4>
                     </th>
                     <th>
-                        <h4>URL</h4>
+                        <h4><i>URL</i></h4>
                     </th>
                 </tr>
             </thead>
@@ -31,7 +31,7 @@
                         {{Proyectos.descripcionP}}
                     </td>
                     <td>
-                        <h6><a href="{{Proyectos.linkP}}" target="_blank">Ver proyecto</a></h6>
+                        <h6><a href="{{Proyectos.linkP}}" target="_blank" *ngIf="Proyectos.linkP">Ver proyecto</a></h6>
                     </td>
                     <td *ngIf="isLogged">
                         <button class="btn btn-light" routerLink="/proyectos-edit/{{Proyectos.id}}">
